@@ -65,8 +65,10 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView alsoKnownTv = findViewById(R.id.also_known_tv);
         for(int i = 0; i < sandwich.getAlsoKnownAs().size(); i++){
+            if(i != 0) {
+                alsoKnownTv.append("\n");
+            }
             alsoKnownTv.append(sandwich.getAlsoKnownAs().get(i));
-            alsoKnownTv.append("\n");
         }
 
         TextView descriptionTv = findViewById(R.id.description_tv);
@@ -74,8 +76,10 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView ingredientsTv = findViewById(R.id.ingredients_tv);
         for(int i = 0; i < sandwich.getIngredients().size(); i++){
+            if(i != 0) {
+                ingredientsTv.append("\n");
+            }
             ingredientsTv.append(sandwich.getIngredients().get(i));
-            ingredientsTv.append("\n");
         }
     }
 }
