@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         TextView descriptionTv = findViewById(R.id.description_tv);
-        descriptionTv.setText(descriptionTv.getText().toString());
+        descriptionTv.setText(sandwich.getDescription());
 
         TextView ingredientsTv = findViewById(R.id.ingredients_tv);
         for(int i = 0; i < sandwich.getIngredients().size(); i++){
